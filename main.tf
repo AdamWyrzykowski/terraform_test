@@ -52,27 +52,3 @@ resource "digitalocean_ssh_key" "main" {
 resource "tls_private_key" "main" {
     algorithm = "ED25519"
 }
-
-resource "local_file" "main" {
-  content = tls_private_key.main.private_key_openssh
-  filename = "${path.root}/artifacts/klucz_ed25519"
-  file_permission = 0600
-}
-
-resource "local_file" "inventory" {
-  content = yamlencode({
-    instances = {
-      hosts = { for name, instance in digitalocean_droplet.main : instance.name => {} }
-    }
-  })
-  filename = "${path.root}/artifacts/inventory/hosts.yml"
-}
-
-resource "local_file" "host" {
-  content = yamlencode({
-    ansible_host = digitalocean_droplet.main[0].ipv4_address
-    ansible_user = "root"
-    ansible_ssh_private_key_file = "${path.root}/artifacts/klucz_ed25519"
-  })
-  filename = "${path.root}/artifacts/inventory/host_vars/${digitalocean_droplet.main[0].name}.yml"
-}
