@@ -1,5 +1,5 @@
 output "public_ip" {
-  value = azurerm_public_ip.example[0].ipv4_address
+  value = digitalocean_droplet.main[0].ipv4_address
   description = "value of the public IP address of the droplet"
 }
 
