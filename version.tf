@@ -9,7 +9,7 @@ terraform {
       version = "2.37.0"
     }
   }
-  
+
   cloud {
     organization = "szkolenia_cloud"
     hostname = "app.terraform.io" # For Terraform cloud is app.terraform.io for Terraform Enterprise is terraform.yourcompany.com
