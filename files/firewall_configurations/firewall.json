@@ -3,7 +3,7 @@
       {
         "protocol": "tcp",
         "port_range": "22",
-        "source_addresses": ["139.59.141.119/32"]
+        "source_addresses": ["0.0.0.0/0"]
       }
     ],
     "outbound": [
