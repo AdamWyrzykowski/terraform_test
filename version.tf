@@ -9,4 +9,12 @@ terraform {
       version = "2.37.0"
     }
   }
+  
+  cloud {
+    organization = "szkolenia_cloud"
+    hostname = "app.terraform.io" # For Terraform cloud is app.terraform.io for Terraform Enterprise is terraform.yourcompany.com
+    workspaces {
+      name = "tf-cloud-start-example-digitalocean" # change this to your workspace name after when you create it.
+    }
+  }
 }
