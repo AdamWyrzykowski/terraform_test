@@ -11,26 +11,31 @@ variable "do_token" {
 variable "droplet_name" {
   type = string
   description = "Droplet Name"
+  # default = "tf-cloud-start-example-digitalocean"
 }
 
 variable "droplet_image" {
   type = string
   description = "Droplet Image"
+  # default = "ubuntu-22-04-x64"
 }
 
 variable "droplet_size" {
   type = string
   description = "Droplet Size"
+  # default = "s-1vcpu-1gb"
 }
 
 variable "region" {
   type = string
   description = "Region"
+  # default = "fra1"
 }
 
 variable "vpc_name" {
   type = string
   description = "VPC Name"
+  # default = "tf-cloud-start-example-digitalocean-network"
 }
 
 variable "vpc_ip_range" {
