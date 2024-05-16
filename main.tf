@@ -1,6 +1,6 @@
 resource "digitalocean_droplet" "main" {
   count = 1
-  name = var.droplet_name
+  name = "${var.droplet_name}-vm"
   image = var.droplet_image
   size = var.droplet_size
   region = var.region
