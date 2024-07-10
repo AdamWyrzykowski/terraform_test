@@ -14,8 +14,8 @@ terraform {
     }
   }
 
-/*  cloud {
-    organization = "szkolenia_cloud"
+ cloud {
+    organization = "adamw_test"
     # For Terraform cloud is 
     # app.terraform.io for Terraform 
     # Enterprise is 
@@ -25,9 +25,9 @@ terraform {
     # your workspace name after when 
     # you create it.
     workspaces {
-      name = "tf-cloud-start-example-digitalocean" 
+      name = "terraform_test" 
     }
   }
-*/
+
 }
 
