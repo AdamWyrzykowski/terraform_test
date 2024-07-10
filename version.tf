@@ -14,7 +14,7 @@ terraform {
     }
   }
 
-  cloud {
+/*  cloud {
     organization = "szkolenia_cloud"
     # For Terraform cloud is 
     # app.terraform.io for Terraform 
@@ -29,3 +29,4 @@ terraform {
     }
   }
 }
+*/
