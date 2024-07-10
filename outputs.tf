@@ -8,7 +8,3 @@ output "private_key_openssh" {
   description = "value of the private key in OpenSSH format"
   sensitive = true
 }
-
-output "kotek" {
-  value = digitalocean_droplet.main[0].ipv4_address_private
-}
