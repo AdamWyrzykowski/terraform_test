@@ -49,6 +49,6 @@ resource "digitalocean_ssh_key" "main" {
   public_key = tls_private_key.main.public_key_openssh
 }
 
-resource "tls_private_key" "main" {
-    algorithm = "ED25519"
-}
+# resource "tls_private_key" "main" {
+#     algorithm = "ED25519"
+# }
