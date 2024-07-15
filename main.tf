@@ -8,7 +8,7 @@ resource "digitalocean_droplet" "main" {
   monitoring = false
   ipv6 = false
   vpc_uuid = digitalocean_vpc.main.id
-  ssh_keys = [digitalocean_ssh_key.main.id]
+  # ssh_keys = [digitalocean_ssh_key.main.id]
   tags = [ "testserver"]
   user_data = null
   droplet_agent = false
