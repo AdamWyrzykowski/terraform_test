@@ -8,7 +8,7 @@ resource "digitalocean_droplet" "main" {
   monitoring = false
   ipv6 = false
   vpc_uuid = digitalocean_vpc.main.id
-  # ssh_keys = [digitalocean_ssh_key.main.id]
+  ssh_keys = [digitalocean_ssh_key.main.id]
   tags = [ "testserver"]
   user_data = null
   droplet_agent = false
@@ -44,11 +44,11 @@ resource "digitalocean_firewall" "main" {
   }
 }
 
-# resource "digitalocean_ssh_key" "main" {
-#   name = var.ssh_key_name
-#   public_key = tls_private_key.main.public_key_openssh
-# }
+resource "digitalocean_ssh_key" "main" {
+  name = var.ssh_key_name
+  public_key = tls_private_key.main.public_key_openssh
+}
 
-# resource "tls_private_key" "main" {
-#     algorithm = "ED25519"
-# }
+resource "tls_private_key" "main" {
+    algorithm = "ED25519"
+}
